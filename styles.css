@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Carlito", sans-serif;
+
+}
+
+body{    
+
+    background: linear-gradient(90deg, hsla(159, 82%, 55%, 1) 0%, hsla(206, 98%, 48%, 1) 100%);
+
+}
+    
+    
+
+.principal{
+    position: relative;
+    max-width: 480px;
+    width: 100%;
+    background-color: #CAE9FF;
+    box-shadow: 0 5px 10px rgba(0,0,0, 0.1);
+    margin: 45px auto 0;
+    padding: 25px;
+    border-radius: 10px;
+        
+    
+}
+
+.fecha{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 100px;
+    font-weight: bold;
+    color: #CAE9FF;
+}
+
+.principal .input-field{
+    position: relative; 
+    width: 100%;
+    height: 60px;
+
+}
+
+.input-field textarea{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    outline: none;
+    font-size: 18px;
+    padding: 18px 45px 18px 15px;
+    border: 1px solid #fff;
+    resize: none;
+
+
+}
+
+textarea::-webkit-scrollbar{
+    display: none;
+}
+
+.input-field  .fa-clipboard{
+    font-size: 23px;
+    color: purple;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+}
+ .input-field textarea:focus{
+    border-color: #4070f4;
+
+ }
+
+ .principal .todo-list{
+    margin-top: 23px;
+    padding-right: 8px;
+    max-height: 380px;
+    overflow-y: auto;
+ }
+
+ .todo-list .list{
+    position: relative;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+ }
+
+ .todo-list .list input{
+    width: 15px;
+    height: 15px;
+    accent-color: purple;
+    pointer-events: none; 
+ }
+
+  .list input:checked ~ .task{
+    text-decoration: line-through;
+   } 
+   
+    
+ .todo-list .list .task{
+    padding: 3px;
+    word-break: break-all;
+    
+ }
+
+.todo-list .list .fa-trash{
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: #707070;
+    opacity: 0.6;
+    display: none;
+}
+
+.todo-list .list:hover i{
+    display: inline-flex;
+}
+
+.todo-list .list .fa-trash:hover{
+    opacity: 1;
+}
+
+.principal .pending-tasks{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    color: purple;
+}
+
+.pending-tasks .clear{
+padding: 5px 10px;
+outline: none;
+border: none;
+background: purple;
+color:#fff;
+cursor: pointer;
+border-radius: 15px;
+opacity: 0.7;
+white-space: nowrap;
+
+
+}
+
+.clear:hover{
+    opacity: 1;
+}
+
+@media (max-width: 300px){
+    .principal{
+        position: relative;
+        max-width: 300px;
+        width: 80%;
+        margin: 10px auto 0;
+        padding: 13px;
+        border-radius: 10px;
+    }
+
+    .input-field textarea{
+        width: 100%;
+        height: 100%;
+        font-size: 15px;
+        line-height: 2.5;
+        padding: 10px 25px 10px 7px;
+        border: 1px solid #fff;
+        resize: none;
+    
+
+}
+
+}
